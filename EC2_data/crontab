@@ -1,0 +1,17 @@
+#fb scraper scheduler
+0,30 * * * * /usr/bin/python3 /home/ubuntu/fb-scraper/selenium_fb_scraper.py
+
+#insta scraper scheduler
+2,17,32,47 * * * * /usr/bin/python3 /home/ubuntu/insta-scraper/insta_scraper.py
+
+#twitter scraper scheduler
+4,19,34,49 * * * * /usr/bin/python3 /home/ubuntu/twitter-scraper/tweet_scrape.py
+
+#ticket scraper scheduler
+6,21,36,51 * * * * /usr/bin/python3 /home/ubuntu/ticket-scraper/ticketscraper_and_formatter.py
+
+#lyrics scraper scheduler
+8 0 * * * /usr/bin/python3 /home/ubuntu/lyrics-scraper/lyricsscraper_and_formatter.py
+
+#youtube scraper scheduler
+10,40 * * * * /usr/bin/python3 /home/ubuntu/youtube-scraper/scraped-data-formatter.py

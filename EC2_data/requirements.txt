@@ -1,0 +1,8 @@
+selenium
+bs4
+requests
+twython
+pycrypto
+pyrebase
+lxml
+tqdm
