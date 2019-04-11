@@ -134,14 +134,14 @@ for link in link_list:
     except:
         message_list.append(' ')
 
-    timediv=post_soup.find("header", class_='_4g33 _1o88 _77kd _5qc1')
-    time_stamp=''
+    timediv=post_soup.find("div", class_='_52jc _5qc4 _78cz _24u0 _36xo').abbr
+    '''time_stamp=''
     for i in range(len(timediv.text)):
         if timediv.text[i].isdigit():
             time_stamp=timediv.text[i:timediv.text.find('·')]
-            break
+            break'''
 
-    createdtime_list.append(time_stamp)
+    createdtime_list.append(timediv.text)
 
     try:
         picparent=post_soup.find("div", class_='_5rgu _7dc9 _27x0').find('a')['href']
