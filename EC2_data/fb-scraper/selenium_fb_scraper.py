@@ -1,4 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 import time
 from bs4 import BeautifulSoup
 import json
@@ -94,9 +98,18 @@ options = webdriver.ChromeOptions()
 options = options.to_capabilities()
 driver = webdriver.Remote(service.service_url, options)
 driver.get(url)
+
+wait = WebDriverWait(driver, 10)
+user = wait.until(EC.visibility_of_element_located((By.ID, "m_login_email")))
+
 driver.find_element_by_id('m_login_email').send_keys(username)
 time.sleep(2)
-driver.find_element_by_id('m_login_password').send_keys(password)
+try:
+    driver.find_element_by_id('m_login_password').send_keys(password)
+except:
+    driver.find_element_by_id('m_login_email').send_keys(Keys.ENTER)
+    time.sleep(5)
+    driver.find_element_by_id('m_login_password').send_keys(password)
 time.sleep(2)
 driver.find_element_by_id('u_0_5').click()
 time.sleep(5)
