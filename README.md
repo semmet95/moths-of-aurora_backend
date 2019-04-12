@@ -1,5 +1,5 @@
 # moths-of-aurora_backend
-Moths of Aurora app's backend hosted on an AWS EC2 instance using Firebase Realtime Database and Cloud Functions.
+[Moths of Aurora](https://github.com/singh-95/moths-of-aurora) app's backend hosted on an AWS EC2 instance using Firebase Realtime Database and Cloud Functions.
 
 The backend's purpose is to scrape data from different social media acounts of the artist [Aurora Aksnes](https://aurora-music.com), viz, [Facebook](https://m.facebook.com/iamAURORA/posts/?_rdr), [Instagram](https://www.instagram.com/auroramusic/), [Twitter](https://twitter.com/AURORAmusic) and Youtube and update the [database](https://moths-of-aurora.firebaseio.com/.json) as well as generate notification for the Android app when new activity is detected. It also includes scripts that scrape the artist's [official site](https://aurora-music.com) to get the live shows data, and a script that uses [Genius api](https://docs.genius.com/) to scrape and store lyrics of all the songs released by her that are available on their site.
 
