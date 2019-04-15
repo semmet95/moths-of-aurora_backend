@@ -100,7 +100,7 @@ driver = webdriver.Remote(service.service_url, options)
 driver.get(url)
 
 wait = WebDriverWait(driver, 10)
-user = wait.until(EC.visibility_of_element_located((By.ID, "m_login_email")))
+waited = wait.until(EC.visibility_of_element_located((By.ID, "m_login_email")))
 
 driver.find_element_by_id('m_login_email').send_keys(username)
 time.sleep(2)
